@@ -1,0 +1,123 @@
+public class Hero {
+    //Attributes/Properties
+    private String name;
+    private String surname;
+    private String heroName;
+    private String heroCity;
+    private String universe;
+    private boolean isEvil;
+    private double heroSalary;
+    private int deedTime;
+
+    //non-argument constructor
+    public Hero() {
+        this.name = "Liza";
+        this.surname = "Simanovica";
+        this.heroName = "DogoMom";
+        this.heroCity = "Riga";
+        this.universe = "Our";
+        this.isEvil = false;
+        this.heroSalary = 3050.99d;
+        this.deedTime = 36;
+    }
+
+    //argument constructor
+    public Hero(String inputName, String inputSurname, String inputHeroName, String inputHeroCity, String inputUniverse, boolean inputIsEvil, double inputHeroSalary, int inputDeedTime) {
+        this.name = inputName;
+        this.surname = inputSurname;
+        this.heroName = inputHeroName;
+        this.heroCity = inputHeroCity;
+        this.universe = inputUniverse;
+        this.isEvil = inputIsEvil;
+        this.heroSalary = inputHeroSalary;
+        this.deedTime = inputDeedTime;
+
+    }
+
+
+    //toString() is the method where information about the object values are returned as String value.
+    public String toString() {
+        return name + " " + surname + " " + heroName + " " + heroCity + " " + universe + " " + isEvil + " " + heroSalary + " " + deedTime;
+    }
+
+
+    //calculatedLevel() is the method where hero level is calculated:
+    public int calculatedLevel() {
+        if (deedTime < 20) {
+
+            return 1;
+        } else if ((deedTime > 20) && (deedTime < 40)) {
+
+            return 2;
+        } else {
+
+            return 3;
+        }
+    }
+
+
+    //add get and set methods to the class
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getHeroName() {
+        return heroName;
+    }
+
+    public void setHeroName(String heroName) {
+        this.heroName = heroName;
+    }
+
+    public String getHeroCity() {
+        return heroCity;
+    }
+
+    public void setHeroCity(String heroCity) {
+        this.heroCity = heroCity;
+    }
+
+    public String getUniverse() {
+        return universe;
+    }
+
+    public void setUniverse(String universe) {
+        this.universe = universe;
+    }
+
+    public boolean isEvil() {
+        return isEvil;
+    }
+
+    public void setEvil(boolean evil) {
+        isEvil = evil;
+    }
+
+    public double getHeroSalary() {
+        return heroSalary;
+    }
+
+    public void setHeroSalary(double heroSalary) {
+        this.heroSalary = heroSalary;
+    }
+
+    public int getDeedTime() {
+        return deedTime;
+    }
+
+    public void setDeedTime(int deedTime) {
+        this.deedTime = deedTime;
+    }
+}
