@@ -49,12 +49,12 @@ public class Hero {
         if (deedTime < 20) {
 
             return 1;
-        } else if ((deedTime > 20) && (deedTime < 40)) {
-
+        } else if ((deedTime >= 20) && (deedTime < 40)) {
             return 2;
-        } else {
-
+        } else if (deedTime >= 40){
             return 3;
+        } else {
+            return 0;
         }
     }
 

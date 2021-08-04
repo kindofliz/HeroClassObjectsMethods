@@ -73,6 +73,19 @@ public class HeroApp {
 
 
 
+        //DISTRICT SAMPLE
+        District district1 = new District();
+        district1.addNewHero(a);
+        System.out.println(district1.toString());
+
+
+
+
+
+
+
+
+
 
         //4. BONUS TASK
         //Using Scanner class, ask for input of all heroes values in the console and create the new hero in the system.
