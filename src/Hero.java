@@ -1,5 +1,6 @@
 public class Hero {
     //Attributes/Properties
+    private int heroID;
     private String name;
     private String surname;
     private String heroName;
@@ -11,6 +12,7 @@ public class Hero {
 
     //non-argument constructor
     public Hero() {
+        this.heroID = 101;
         this.name = "Liza";
         this.surname = "Simanovica";
         this.heroName = "DogoMom";
@@ -22,7 +24,8 @@ public class Hero {
     }
 
     //argument constructor
-    public Hero(String inputName, String inputSurname, String inputHeroName, String inputHeroCity, String inputUniverse, boolean inputIsEvil, double inputHeroSalary, int inputDeedTime) {
+    public Hero(int inputHeroId, String inputName, String inputSurname, String inputHeroName, String inputHeroCity, String inputUniverse, boolean inputIsEvil, double inputHeroSalary, int inputDeedTime) {
+        this.heroID = inputHeroId;
         this.name = inputName;
         this.surname = inputSurname;
         this.heroName = inputHeroName;
@@ -37,7 +40,7 @@ public class Hero {
 
     //toString() is the method where information about the object values are returned as String value.
     public String toString() {
-        return name + " " + surname + " " + heroName + " " + heroCity + " " + universe + " " + isEvil + " " + heroSalary + " " + deedTime;
+        return heroID + " " + name + " " + surname + " " + heroName + " " + heroCity + " " + universe + " " + isEvil + " " + heroSalary + " " + deedTime;
     }
 
 
@@ -56,7 +59,18 @@ public class Hero {
     }
 
 
+
+
+
     //add get and set methods to the class
+    public int getHeroID() {
+        return heroID;
+    }
+
+    public void setHeroID(int heroID) {
+        this.heroID = heroID;
+    }
+
     public String getName() {
         return name;
     }
