@@ -35,7 +35,22 @@ public class District {
        return heroesInTheDistrict.remove(index);
     }
 
-    //CONTINUE HOMEWORK below
+
+    //is a method where total heroes’ levels will be summarized and divided by the amount of the hero in this District.
+    public float calculateAvgLevelInDistrict() {
+
+        float heroLevelSum = 0;
+        for (int i = 0; i < heroesInTheDistrict.size(); i++) {
+            Hero hero = heroesInTheDistrict.get(i);
+            heroLevelSum += hero.calculatedLevel(); //sum of all hero's levels in the district
+        }
+
+        return heroLevelSum / heroesInTheDistrict.size();
+    }
+
+
+
+
 
 
 

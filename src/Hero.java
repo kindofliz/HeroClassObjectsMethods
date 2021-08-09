@@ -6,11 +6,11 @@ public class Hero {
     private String heroName;
     private String heroCity;
     private String universe;
-    private boolean isEvil;
+    private HeroType heroType;
     private double heroSalary;
     private int deedTime;
 
-    //non-argument constructor
+    //non-argument constructor (+ this one is hardcoded with values)
     public Hero() {
         this.heroID = 101;
         this.name = "Liza";
@@ -18,20 +18,20 @@ public class Hero {
         this.heroName = "DogoMom";
         this.heroCity = "Riga";
         this.universe = "Our";
-        this.isEvil = false;
+        this.heroType = HeroType.Hero;
         this.heroSalary = 3050.99d;
         this.deedTime = 36;
     }
 
     //argument constructor
-    public Hero(int inputHeroId, String inputName, String inputSurname, String inputHeroName, String inputHeroCity, String inputUniverse, boolean inputIsEvil, double inputHeroSalary, int inputDeedTime) {
+    public Hero(int inputHeroId, String inputName, String inputSurname, String inputHeroName, String inputHeroCity, String inputUniverse, HeroType heroType, double inputHeroSalary, int inputDeedTime) {
         this.heroID = inputHeroId;
         this.name = inputName;
         this.surname = inputSurname;
         this.heroName = inputHeroName;
         this.heroCity = inputHeroCity;
         this.universe = inputUniverse;
-        this.isEvil = inputIsEvil;
+        this.heroType = heroType;
         this.heroSalary = inputHeroSalary;
         this.deedTime = inputDeedTime;
 
@@ -40,14 +40,13 @@ public class Hero {
 
     //toString() is the method where information about the object values are returned as String value.
     public String toString() {
-        return heroID + " " + name + " " + surname + " " + heroName + " " + heroCity + " " + universe + " " + isEvil + " " + heroSalary + " " + deedTime;
+        return heroID + " " + name + " " + surname + " " + heroName + " " + heroCity + " " + universe + " " + heroType + " " + heroSalary + " " + deedTime;
     }
 
 
     //calculatedLevel() is the method where hero level is calculated:
     public int calculatedLevel() {
         if (deedTime < 20) {
-
             return 1;
         } else if ((deedTime >= 20) && (deedTime < 40)) {
             return 2;
@@ -111,12 +110,12 @@ public class Hero {
         this.universe = universe;
     }
 
-    public boolean isEvil() {
-        return isEvil;
+    public HeroType getHeroType() {
+        return heroType;
     }
 
-    public void setEvil(boolean evil) {
-        isEvil = evil;
+    public void setHeroType(HeroType heroType) {
+        this.heroType = heroType;
     }
 
     public double getHeroSalary() {
@@ -134,4 +133,10 @@ public class Hero {
     public void setDeedTime(int deedTime) {
         this.deedTime = deedTime;
     }
+
+}
+
+enum HeroType {
+    Hero,
+    Villain
 }
